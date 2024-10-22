@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca ECC - Catálogo de Livros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Biblioteca ECC</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#livros">LIVROS</a></li>
+                    <li><a href="#reservas">biblioteca</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção do Catálogo -->
+        <section class="catalogo">
+            <h2>Catálogo de Livros</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar livro..." onkeyup="pesquisarLivros()" aria-label="Pesquisar livro">
+                <button class="search-icon" aria-label="Pesquisar">
+                    <img src="ss.jpg" alt="Ícone de pesquisa">
+                </button>
+            </div>
+            <div class="livros">
+                <div class="livro" onclick="abrirModal('Dom Quixote', 'Miguel de Cervantes', 'OIP (1).jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Dom Quixote">
+                    <img src="OIP (1).jpg" alt="Capa do livro Dom Quixote">
+                    <h3>Dom Quixote</h3>
+                    <p>Autor: Miguel de Cervantes</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Diário de Anne Frank', 'Anne Frank', 'large.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Diário de Anne Frank">
+                    <img src="large.jpg" alt="Capa do livro Diário de Anne Frank">
+                    <h3>Diário de Anne Frank</h3>
+                    <p>Autor: Anne Frank</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Harry Potter e o Cálice de Fogo', 'J.K. Rowling', 'D_NQ_NP_835042-MLB44754843826_012021-F.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Harry Potter e o Cálice de Fogo">
+                    <img src="D_NQ_NP_835042-MLB44754843826_012021-F.jpg" alt="Capa do livro Harry Potter e o Cálice de Fogo">
+                    <h3>Harry Potter e o Cálice de Fogo</h3>
+                    <p>Autor: J.K. Rowling</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Lupin', 'Maurício', 'R.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Lupin">
+                    <img src="R.jpg" alt="Capa do livro Lupin">
+                    <h3>Lupin</h3>
+                    <p>Autor: Maurício</p>
+                </div>
+                <div class="livro" onclick="abrirModal('A Revolução dos Bichos', 'George Orwell', 'revolucao-bichos.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de A Revolução dos Bichos">
+                    <img src="a-revolucao-dos-bichos.jpg" alt="Capa do livro A Revolução dos Bichos">
+                    <h3>A Revolução dos Bichos</h3>
+                    <p>Autor: George Orwell</p>
+                </div>
+                <div class="livro" onclick="abrirModal('1984', 'George Orwell', '1984.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de 1984">
+                    <img src="OIP.jpg" alt="Capa do livro 1984">
+                    <h3>1984</h3>
+                    <p>Autor: George Orwell</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'pequeno-principe.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de O Pequeno Príncipe">
+                    <img src="p.jpg" alt="Capa do livro O Pequeno Príncipe">
+                    <h3>O Pequeno Príncipe</h3>
+                    <p>Autor: Antoine de Saint-Exupéry</p>
+                </div>
+                <div class="livro" onclick="abrirModal('A Guerra dos Tronos', 'George R.R. Martin', 'guerra-dos-tronos.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de A Guerra dos Tronos">
+                    <img src="das.jpg" alt="Capa do livro A Guerra dos Tronos">
+                    <h3>A Guerra dos Tronos</h3>
+                    <p>Autor: George R.R. Martin</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Senhor dos Anéis', 'J.R.R. Tolkien', 'senhor-aneis.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de O Senhor dos Anéis">
+                    <img src="senhor-dos-aneis-colume-unico-amazon.jpg" alt="Capa do livro O Senhor dos Anéis">
+                    <h3>O Senhor dos Anéis</h3>
+                    <p>Autor: J.R.R. Tolkien</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Cem Anos de Solidão', 'Gabriel García Márquez', 'cem-anos-solidao.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Cem Anos de Solidão">
+                    <img src="R (1)ddd.jpg" alt="Capa do livro Cem Anos de Solidão">
+                    <h3>Cem Anos de Solidão</h3>
+                    <p>Autor: Gabriel García Márquez</p>
+                </div>
+                <div class="livro" onclick="abrirModal('A Divina Comédia', 'Dante Alighieri', 'divina-comedia.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de A Divina Comédia">
+                    <img src="37039854583_c0fe912932_b.jpg" alt="Capa do livro A Divina Comédia">
+                    <h3>A Divina Comédia</h3>
+                    <p>Autor: Dante Alighieri</p>
+                </div>
+                
+                <div class="livro" onclick="abrirModal('O Morro dos Ventos Uivantes', 'Emily Brontë', 'morro-ventos.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de O Morro dos Ventos Uivantes">
+                    <img src="asd.jpg" alt="Capa do livro O Morro dos Ventos Uivantes">
+                    <h3>O Morro dos Ventos Uivantes</h3>
+                    <p>Autor: Emily Brontë</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Frankenstein', 'Mary Shelley', 'frankenstein.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Frankenstein">
+                    <img src="y.jpg" alt="Capa do livro Frankenstein">
+                    <h3>Frankenstein</h3>
+                    <p>Autor: Mary Shelley</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Moby Dick', 'Herman Melville', 'moby-dick.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de Moby Dick">
+                    <img src="i.jpg" alt="Capa do livro Moby Dick">
+                    <h3>Moby Dick</h3>
+                    <p>Autor: Herman Melville</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Apanhador no Campo de Centeio', 'J.D. Salinger', 'apanhador-centeio.jpg')" tabindex="0" role="button" aria-label="Abrir detalhes de O Apanhador no Campo de Centeio">
+                    <img src="o.jpg" alt="Capa do livro O Apanhador no Campo de Centeio">
+                    <h3>O Apanhador no Campo de Centeio</h3>
+                    <p>Autor: J.D. Salinger</p>
+                </div>
+                
+                
+            </div>
+        </section>
+    </main>
+<!-- Modal de informações do livro -->
+<div id="modal" class="modal" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img id="modal-img" src="" alt="Imagem do livro">
+        <h3 id="modal-titulo"></h3>
+        <p id="modal-autor"></p>
+        
+        <!-- Sistema de Avaliação -->
+        <div class="avaliacao">
+            <h4>Avalie este livro:</h4>
+            <span class="estrela" onclick="avaliar(1)">&#9733;</span>
+            <span class="estrela" onclick="avaliar(2)">&#9733;</span>
+            <span class="estrela" onclick="avaliar(3)">&#9733;</span>
+            <span class="estrela" onclick="avaliar(4)">&#9733;</span>
+            <span class="estrela" onclick="avaliar(5)">&#9733;</span>
+            <p id="resultado-avaliacao"></p>
+        </div>
+
+        <!-- Botão para abrir o formulário de reserva -->
+        <button class="btn-reservar" onclick="abrirFormularioReserva()">Reservar</button>
+    </div>
+</div>
+
+<!-- Modal de formulário de reserva -->
+<div id="modal-reserva" class="modal hidden" role="dialog" aria-labelledby="tituloModalReserva" aria-hidden="true">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharFormularioReserva()">&times;</span>
+        <h3>Reservar Livro</h3>
+        <form id="formReserva" onsubmit="salvarReserva(event)">
+            <label for="nomeAluno">Nome do Aluno:</label>
+            <input type="text" id="nomeAluno" name="nomeAluno" required>
+            
+            <label for="tempoReserva">Tempo de Reserva (em dias):</label>
+            <input type="number" id="tempoReserva" name="tempoReserva" required>
+
+            <label for="telefone">Telefone para contato:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </div>
+</div>
+
+<!-- Seção de Reservas -->
+<section id="reservas" class="hidden">
+    <h2>Reservas</h2>
+    <div id="reservas-lista"></div>
+</section>
+    
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Biblioteca ECC. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
